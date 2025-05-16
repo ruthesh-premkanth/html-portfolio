@@ -10,7 +10,9 @@
     <!-- FONT AWESOME (for icons and logos): https://fontawesome.com/search -->
 </head>
 <body>
-    <div id="header">
+    <div id="header" class="start-sec">
+        <img src="./backgroundImage.jpeg" alt="no image" class="bg-img">
+        <img src="./imageOfMobile.jpg" alt="" class="mobile-bg">
         <div class="container">
             <nav>
                 <img src="logo1.jpg" class="logo"">
@@ -25,8 +27,8 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p>Full Stack Java Developer</p>
-                <h1>Hi, This is <br>Ch <span>Ruthesh</span> Prem Kanth,</h1>
+                <p class="role">Software Engineer</p>
+                <h1 class="intro">Hi, This is <br>Ch <span>Ruthesh</span> Prem Kanth,</h1>
             </div>
         </div>
     </div>
@@ -36,27 +38,38 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="passphotowithbg.png.jpeg" alt="no image">
+                    <img src="passphotowithbg.png.jpeg" alt="no image" class="pass-img">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About me</h1>
-                    <p>As a recent graduate, I seek a role that enables me to continually expand my knowledge, 
-                        enhance my skills, and deliver high-quality work for the organization while fostering my growth as a software developer.</p>
+                    <p>Software developer with one year of experience in backend development, low-code platforms, and database management. Skilled in delivering efficient, scalable solutions and committed to continuous learning and professional growth.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id="skills">
+                    <div class="tab-contents active-tab" id="experience">
                         <ul>
-                            <li><span>Front End Technologies</span><br>HTML<br>CSS<br>JavaScript</li>
-                            <li><span>Back End Technologies</span><br>Java(Core + Advance)<br>C Programming<br>Data Structures</li>
+                            <li class="exp-head"><span>Software Engineer</span><br><span>Lowcode Labs (May 2024 - Present)</span></li>
+                            <li><span>UI/UX Design</span><br>Proficient in creating intuitive, user-centric designs using <b>Figma</b>.<br>Conducted design workshops to improve team collaboration and design consistency.</li>
+                            <li><span>Frontend Development</span><br>Developed responsive, interactive frontends using <b>React, JavaScript, HTML, CSS, SASS, and GSAP.</b><br>Focused on creating reusable components and optimizing front-end performance.</li>
+                            <li><span>Backend Development</span><br>Built robust backend logic using <b>Mendix, Java, and JavaScript</b>.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Front End Technologies</span><br>HTML<br>CSS, SASS<br>JavaScript<br>GSAP<br>React</li>
+                            <li><span>Back End Technologies</span><br>Core Java <br>Advance Java<br>Mendix Development<br>C Programming</li>
                             <li><span>Data Base</span><br>Oracle DB(SQL, PL/SQL)</li>
+                            <li><span>Tools</span><br>Mendix<br>Figma<br>VS Code<br>Eclipse</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="certifications">
                         <ul>
+                            <li><span>Mendix Intermediate Certification</span><br>Mendix Intermediate Developer<br>Certification Number: 90883</li>
+                            <li><span>Mendix Rapid Certification</span><br>Mendix Rapid Developer<br>Certification Number: 89281</li>
                             <li><span>Udemy</span><br>C Programming Bootcamp<br>Instructor: Vlad Budnitski</li>
                             <li><span>Udemy</span><br>Web Development Bootcamp<br>Instructor: Dr. Angela Yu</li>
                             <li><span>Udemy</span><br>Complete JavaScript Course<br>Instructor: Jonas Schmedtmann</li>
@@ -65,7 +78,7 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2019-2023</span><br>Dhanalakshmi College of Engineering(ECE)<br>8.14 CGPA</li>
+                            <li><span>2019-2023</span><br>Dhanalakshmi College of Engineering(ECE)<br>7.87 CGPA</li>
                             <li><span>2017-2019</span><br>TMR Junior College<br>9.8 GPA</li>
                             <li><span>2016-2017</span><br>Vision High School<br>9.8 GPA</li>
                         </ul>
@@ -80,21 +93,21 @@
         <div class="container">
             <h1 class="sub-title">My Projects</h1>
             <div class="services-list">
-                <div>
+                <div class="project-1 lr-animate">
                     <i class="fa-solid fa-code"></i>
                     <h2>Rainfall Prediction and Density Estimation Using ML</h2>
                     <p>The purpose of Rainfall prediction is to predict the amount of rainfall over a 
                         region. Machine learning offers identifying patterns and relationships in historical 
                         weather data to predict future conditions. </p>
-                    <a href="#">Learn more</a>
+                    <!-- <a href="#">Learn more</a> -->
                 </div>
-                <div>
+                <div class="project-2 rl-animate">
                     <i class="fa-solid fa-crop"></i>
                     <h2>IOT Enabled Smart Farming Application</h2>
                     <p> The purpose of Smart Farming is to increase production quantity and 
                         quality, by making maximum use of resources and minimizing environmental impacts. 
                         </p>
-                    <a href="#">Learn more</a>
+                    <!-- <a href="#">Learn more</a> -->
                 </div>
 <!--            <div>
                     <i class="fa-brands fa-app-store"></i>
@@ -112,12 +125,20 @@
         <div class="container">
             <h1 class="sub-title">My Work</h1>
             <div class="work-list">
-                <div class="work">
+                <!-- <div class="work">
                     <img src="work-1.png" alt="no img">
                     <div class="layer">
                         <h3>Social media App</h3>
                         <p>The app connects you to the talented people around the world</p>
                         <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div> -->
+                <div class="work">
+                    <img src="FoodOrder.jpg" alt="no img">
+                    <div class="layer">
+                        <h3>Food Order App</h3>
+                        <p>The app connects you to get delicious food anytime</p>
+                        <a href="https://ruthesh-premkanth.github.io/food-web/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
                 </div>
                 <div class="work">
@@ -137,26 +158,63 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            <!-- <a href="#" class="btn">See more</a> -->
         </div>
     </div>
+
+<!--------------------------------------------------Licenses------------------------------------------------------->
+<div id="licenses">
+    <div class="container">
+            <h1 class="sub-title">Licenses</h1>
+            <div class="row">
+                <div class="license-1 lr-animate">
+                    <div class="parent">
+                        <div class="card">
+                            <div class="content-box">
+                                <span class="card-title">Mendix Rapid Developer</span>
+                                <p class="card-content">
+                                    <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit.  -->
+                                </p>
+                                <a href="./MendixRapidDeveloper-89281.pdf" class="download-lic" download>Download</a>
+                            </div>
+                                <img src="./rapid 1.svg" alt="no img" class="lic-img">
+                        </div>
+                      </div>
+                </div>
+                <div class="license-2 rl-animate">
+                    <div class="parent">
+                        <div class="card">
+                            <div class="content-box">
+                                <span class="card-title">Mendix Intermediate Developer</span>
+                                <p class="card-content">
+                                    <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit.  -->
+                                </p>
+                                <a href="./MendixIntermediateDeveloper-90883.pdf" class="download-lic" download>Download</a>
+                            </div>
+                                <img src="./Intermediate-min 2.svg" alt="no img" class="lic-img">
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+</div>
 <!-- ---------------------------------------------------------contact------------------------------------------------------- -->
     <div id="contact">
         <div class="container">
             <div class="row">
-                <div class="contact-left">
+                <div class="contact-left lr-animate">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i>rutheshpremkanth@gmail.com</p>
                     <p><i class="fa-solid fa-square-phone"></i>8978938945</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/ruthesh.premkanth.3?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/ruthesh-prem-kanth-963a5323a"><i class="fa-brands fa-linkedin"></i></i></a>
-                        <a href="https://www.instagram.com/ruthesh_prem_kanth?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/ruthesh.premkanth.3?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/ruthesh-prem-kanth-963a5323a" target="_blank"><i class="fa-brands fa-linkedin"></i></i></a>
+                        <a href="https://www.instagram.com/ruthesh_prem_kanth?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                         <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a> -->
                     </div>
-                    <a href="RutheshPremKanthCH_Resume.pdf" download class="btn btn2">Download CV</a>
+                    <a href="RutheshChintham_UIUXDeveloper_Resume.pdf" download class="btn btn2">Download CV</a>
                 </div>
-                <div class="contact-right">
+                <div class="contact-right rl-animate">
                     <form action="" name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
@@ -227,5 +285,8 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
